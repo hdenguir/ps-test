@@ -14,7 +14,7 @@
 $ npm install
 ```
 
-### Run app (first run the api to use secure payment)
+### Run app
 
 ```sh
 $ npm run dev
