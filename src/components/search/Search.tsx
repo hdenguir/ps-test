@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory, useLocation, useParams } from 'react-router-dom';
 import { Book, getBooks } from '../../app/api';
 import { useAppDispatch, useAppSelector, useDebounce } from '../../hooks';
 import { RootState } from '../../store';
@@ -7,8 +8,10 @@ import styles from './search.module.css';
 
 function Search() {
   const dispatch = useAppDispatch();
+  const history = useHistory();
+  const { pathname } = useLocation();
+
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const bks = useAppSelector((state: RootState) => state.books.books) as Book[];
 
   const debouncedSearchTerm: string = useDebounce<string>(searchTerm, 500);
 
@@ -21,7 +24,7 @@ function Search() {
         );
       }
 
-      dispatch(allBooks(results || bks));
+      dispatch(allBooks(results));
     });
   }, [debouncedSearchTerm]);
 
@@ -29,9 +32,24 @@ function Search() {
     setSearchTerm(e.target.value.toLowerCase());
   };
 
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    setSearchTerm('');
+    if (pathname !== '/books') {
+      history.push('/books');
+    }
+  };
+
   return (
     <div className={styles.search} data-testid="searchTermBox">
-      <input name="searchTerm" type="text" placeholder="Search..." value={searchTerm} onChange={handleChange} />
+      <input
+        name="searchTerm"
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleChange}
+        onFocus={handleFocus}
+      />
     </div>
   );
 }
