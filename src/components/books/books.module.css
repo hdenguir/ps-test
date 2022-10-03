@@ -1,0 +1,86 @@
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.books {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+.books li {
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  overflow: hidden;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.book figure {
+  margin: 0;
+}
+
+.book .title {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  min-height: 4rem;
+}
+
+.book .desc {
+  padding: 1em;
+}
+
+.books li:hover figcaption {
+  display: block;
+}
+
+.book figcaption {
+  font-size: 0.8rem;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  left: 0;
+  right: 0;
+  top: 0;
+  height: calc(100% - 3.8rem);
+  color: #fff;
+  padding: 0.5rem;
+  overflow-y: auto;
+  display: none;
+  line-height: 1.3rem;
+}
+
+.book img {
+  width: 100%;
+}
+
+.caption {
+  font-size: 0.9em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  min-width: 64px;
+  padding: 6px 16px;
+  border-radius: 0.3rem;
+  background-color: rgb(25, 118, 210);
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+
+  color: transparent;
+  text-shadow: 0 0 0 white;
+}

@@ -1,0 +1,101 @@
+.container {
+  margin: 0 auto;
+  max-width: 940px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.table {
+  width: 100%;
+  background-color: #f1f1f1;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  border-spacing: 5px;
+  margin-bottom: 2rem;
+
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0.3rem;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  width: 100%;
+  border: 2px solid rgb(224, 224, 224);
+}
+
+.table tbody td {
+  padding: 0.8em;
+}
+
+.table th,
+.table td {
+  background-color: white;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  line-height: 1.43;
+}
+
+.table tfoot td {
+  padding: 0.5em;
+  font-weight: bold;
+  text-align: right;
+}
+
+.checkoutError {
+  border: 2px solid red;
+}
+
+.checkoutLoading {
+  opacity: 0.2;
+}
+
+.total,
+.totalText {
+  color: green;
+}
+.totalText {
+  font-size: 1.3rem;
+}
+.totalSubText {
+  font-size: 0.8rem;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  min-width: 64px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: rgb(25, 118, 210);
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+}
+
+.btnDelete {
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  color: #fff;
+}
+
+.input {
+  font-size: 1em;
+  text-align: center;
+  border: 1px solid rgb(224, 224, 224);
+  width: 3em;
+  border-radius: 0.3rem;
+
+  line-height: 1.43;
+}
+
+.errorBox {
+  color: red;
+  margin-bottom: 1rem;
+}

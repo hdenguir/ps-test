@@ -1,0 +1,34 @@
+html,
+body {
+  font-family: 'sans-serif';
+}
+
+.container {
+  width: 100%;
+
+  background-color: rgb(25, 118, 210);
+
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+  padding: 1rem 2em;
+  margin-bottom: 2rem;
+}
+
+.header {
+  max-width: 940px;
+  margin: 0 auto;
+
+  flex-shrink: 0;
+  color: rgb(255, 255, 255);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLink {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding-right: 1em;
+  font-size: 1.3rem;
+}
