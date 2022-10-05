@@ -3,6 +3,7 @@ import * as api from './api';
 
 type Book = api.Book;
 type Offer = api.Offer;
+type CheckoutResponse = api.CheckoutResponse;
 
 import mockListBooks from '../../public/books.json';
 
@@ -67,7 +68,7 @@ describe('API', () => {
       }),
     );
 
-    const checkout: CheckoutResponse[] = await api.checkout({
+    const checkout: CheckoutResponse = await api.checkout({
       'c8fabf68-8374-48fe-a7ea-a00ccd07afff': 1,
       'a460afed-e5e7-4e39-a39d-c885c05db861': 1,
     });
