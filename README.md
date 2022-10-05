@@ -41,7 +41,7 @@ $ npm run format
 ### Run Eslint
 
 ```sh
-$ npm run eslint
+$ npm run lint
 ```
 
 ### Run Build
