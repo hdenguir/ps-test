@@ -15,10 +15,9 @@ function Books() {
     getBooks().then((books) => dispatch(allBooks(books)));
   }, []);
 
-  if (Object.values(books).length === 0) return <p>Loading ...</p>;
-
   return (
     <main className={styles.container}>
+      {Object.values(books).length === 0 && <p>Aucune Livre trouvé</p>}
       <ul className={styles.books}>
         {Object.values(books).map((book) => (
           <li key={book.isbn}>
