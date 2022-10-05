@@ -1,0 +1,15 @@
+.page {
+  margin: 0 auto;
+  max-width: 620px;
+  text-align: center;
+}
+
+.page p {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+.page a {
+  color: rgb(25, 118, 210);
+  text-decoration: none;
+}

@@ -9,6 +9,7 @@ import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import Books from './components/books/Books';
 import Cart from './components/cart/Cart';
+import PageNotFound from './components/404/PageNotFound';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route path="*">
+          <PageNotFound />
         </Route>
       </Switch>
     </Router>

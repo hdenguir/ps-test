@@ -20,7 +20,8 @@ function Search() {
       let results = books;
       if (debouncedSearchTerm) {
         results = Object.values(books).filter(
-          (book: RootState) => book.title.toLowerCase().includes(searchTerm) || book.synopsis.includes(searchTerm),
+          (book: RootState) =>
+            book.title.toLowerCase().includes(searchTerm) || book.synopsis.join(',').includes(searchTerm),
         );
       }
 
